@@ -6,7 +6,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
 
 <style>
-/* 1. ANIMATION: Fade-up effect on load */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -21,7 +20,6 @@ body {
   color: #333;
   overflow-x: hidden;
   
-  /* 2. BACKGROUND: 30% Red Pillars + Gold Dividers + Vignette */
   background: 
     radial-gradient(circle, transparent 50%, rgba(0,0,0,0.2) 100%),
     linear-gradient(to right, transparent 29.8%, #d4af37 29.8%, #d4af37 30.2%, transparent 30.2%),
@@ -30,7 +28,6 @@ body {
   background-attachment: fixed;
 }
 
-/* 3. GHOST TEXT: Side watermarks */
 body::before {
   content: "CLARION";
   position: fixed;
@@ -75,7 +72,6 @@ h1, h2 {
 h1 { font-size: 65px; } 
 h2 { font-size: 48px; }
 
-/* 4. INTERACTIVE IMAGE */
 .album-art {
   width: 100%; 
   max-width: 300px;
@@ -97,7 +93,6 @@ h2 { font-size: 48px; }
   margin-bottom: 30px;
 }
 
-/* 5. BUTTON */
 a:link, a:visited {
   font-family: sans-serif;
   background-color: #9b3939;
@@ -116,23 +111,18 @@ a:hover {
   transform: translateY(-3px);
 }
 
-p {
-  font-size: 20px;
-  margin: 15px 0;
-}
+p { font-size: 20px; margin: 15px 0; }
 
-/* 6. PERSONAL NOTE SECTION */
 .personal-note {
   margin-top: 80px;
   padding-top: 30px;
   border-top: 1px solid #ddd;
   font-style: italic;
   font-size: 18px;
-  color: #666;
+  color: #888;
   line-height: 1.6;
 }
 
-/* 7. FOOTER: Ashley's signature */
 footer {
   margin-top: 40px;
   padding-bottom: 40px;
@@ -146,35 +136,25 @@ footer {
 <body>
 
 <div class="content-wrapper">
-
   <h1>Hello Juliet</h1>
   
   <img src="https://images.genius.com/c27f1e573035afcabb56f76a077f2be7.999x999x1.jpg" alt="Hello Juliet Clarion" class="album-art">
 
   <p class="subtitle">Song by Clarion ‧ 2024</p>
 
-  <a href="https://open.spotify.com/track/5v3Dv4UlDOGaXlvphFpkIX?si=024020de4668457c">Listen on Spotify</a>
+  <a href="https://open.spotify.com/track/4C68Kq9V9e5H6o05Y4W4N5">Listen on Spotify</a>
 
   <p>Hello, hello,</p> 
   <h2>Juliet</h2>
-
   <p>Hello, hello, hello</p>
   <p>Hello, hello,</p>
   <h2>Juliet</h2>
-
   <p>I know the things I should've said</p>
-
   <p>Hello, hello,</p> 
   <h2>Juliet</h2>
   <p>I know, I know, I know</p>
 
-  <p>Yet to my surprise<br>
-  You've come to me<br>
-  Let me make it right<br>
-  Just wait for me<br>
-  We could start from scratch<br>
-  And then proceed 'til I lose it all<br>
-  You slip from me</p>
+  <p>Yet to my surprise<br>You've come to me<br>Let me make it right<br>Just wait for me<br>We could start from scratch<br>And then proceed 'til I lose it all<br>You slip from me</p>
 
   <p>Hello, hello,</p> 
   <h2>Juliet</h2>
@@ -183,28 +163,21 @@ footer {
   <h2>Juliet</h2>
   <p>I know, I know, I know</p>
 
-  <p>Let me in again<br>
-  I need you please<br>
-  Don't you make me beg<br>
-  I'm on my knees</p>
+  <p>Let me in again<br>I need you please<br>Don't you make me beg<br>I'm on my knees</p>
 
   <p>Where are you now</p>
   <h2>Juliet</h2>
-
   <p>Where are you now</p> 
   <h2>Juliet</h2>
-
   <p>Where are you now</p> 
   <h2>Juliet,</h2>
-
   <h1>Juliet?</h1>
 
   <div class="personal-note">
-    A beautiful track and my personal <br>favorite from the 2024 release. <br>It stays with you long after the final note.
+    A beautiful track and my personal favorite from the 2024 release. It stays with you long after the final note.
   </div>
 
   <footer>Website made by Ashley Touzel</footer>
-
 </div>
 
 </body>
