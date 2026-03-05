@@ -1,82 +1,211 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Hello Juliet Lyrics</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
+
 <style>
-/* This part changes the font for the entire page */
-body {
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center; /* This centers your lyrics and titles */
-  background-color: #fdfdfd; /* Optional: gives it a slightly paper-like feel */
-  padding: 50px;
+/* 1. ANIMATION: Fade-up effect on load */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
+body {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  color: #333;
+  overflow-x: hidden;
+  
+  /* 2. BACKGROUND: 30% Red Pillars + Gold Dividers + Vignette */
+  background: 
+    radial-gradient(circle, transparent 50%, rgba(0,0,0,0.2) 100%),
+    linear-gradient(to right, transparent 29.8%, #d4af37 29.8%, #d4af37 30.2%, transparent 30.2%),
+    linear-gradient(to right, transparent 69.8%, #d4af37 69.8%, #d4af37 70.2%, transparent 70.2%),
+    linear-gradient(to right, #9b3939 0%, #9b3939 30%, #fdfdfd 30%, #fdfdfd 70%, #9b3939 70%, #9b3939 100%);
+  background-attachment: fixed;
+}
+
+/* 3. GHOST TEXT: Side watermarks */
+body::before {
+  content: "CLARION";
+  position: fixed;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  color: rgba(255, 255, 255, 0.05);
+  letter-spacing: 20px;
+  pointer-events: none;
+}
+
+body::after {
+  content: "JULIET";
+  position: fixed;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  color: rgba(255, 255, 255, 0.05);
+  letter-spacing: 20px;
+  pointer-events: none;
+}
+
+.content-wrapper {
+  padding: 60px 32%; 
+  animation: fadeInUp 1.5s ease-out;
+}
+
+h1, h2 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: normal;
+  color: #9b3939;
+  border-bottom: 2px solid #9b3939;
+  display: table;
+  margin: 25px auto;
+  padding-bottom: 8px;
+}
+
+h1 { font-size: 65px; } 
+h2 { font-size: 48px; }
+
+/* 4. INTERACTIVE IMAGE */
+.album-art {
+  width: 100%; 
+  max-width: 300px;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border: 4px solid #fdfdfd;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.album-art:hover { transform: scale(1.05); }
+
+.subtitle {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* 5. BUTTON */
 a:link, a:visited {
-  font-family: 'Courier New', Courier, monospace; /* Keeps button font consistent */
-  font-weight: bold;
+  font-family: sans-serif;
   background-color: #9b3939;
   color: white;
   padding: 15px 25px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  transition: 0.3s;
 }
 
-a:hover, a:active {
-  background-color: pink;
-  color: #9b3939; /* Makes text dark when hovering on pink */
+a:hover {
+  background-color: #d4af37;
+  transform: translateY(-3px);
 }
 
-/* Adjusting the spacing for the lyrics */
-h1, h2, p {
-  margin-bottom: 10px;
+p {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+/* 6. PERSONAL NOTE SECTION */
+.personal-note {
+  margin-top: 80px;
+  padding-top: 30px;
+  border-top: 1px solid #ddd;
+  font-style: italic;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 7. FOOTER: Ashley's signature */
+footer {
+  margin-top: 40px;
+  padding-bottom: 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #aaa;
 }
 </style>
 </head>
 <body>
 
-<h1>Hello Juliet</h1>
-<h2>Song by Clarion ‧ 2024</h2>
-<br>
-<a href="https://open.spotify.com/track/5v3Dv4UlDOGaXlvphFpkIX?si=024020de4668457c">Listen on Spotify</a>
+<div class="content-wrapper">
 
-<p><br>Hello, hello,<br></p> 
-<h2>Juliet<br></h2>
-<p>Hello, hello, hello</p>
-<p>Hello, hello,<br></p>
-<h2>Juliet<br></h2>
+  <h1>Hello Juliet</h1>
+  
+  <img src="https://images.genius.com/c27f1e573035afcabb56f76a077f2be7.999x999x1.jpg" alt="Hello Juliet Clarion" class="album-art">
 
-<p>I know the things I should've said<br></p>
+  <p class="subtitle">Song by Clarion ‧ 2024</p>
 
-<p>Hello, hello,<br></p> 
-<h2>Juliet<br></h2>
-<p>I know, I know, I know</p>
-<p>Yet to my surprise
-<br><br>You've come to me
-<br><br>Let me make it right
-<br><br>Just wait for me
-<br><br>We could start from scratch
-<br><br>And then proceed 'til I lose it all
-<br><br>You slip from me<P>
+  <a href="https://open.spotify.com/track/5v3Dv4UlDOGaXlvphFpkIX?si=024020de4668457c">Listen on Spotify</a>
 
-<p><br>Hello, hello,<br></p> 
-<h2>Juliet<br></h2>
-<p>I know the things I should've said<br></p>
-<p>Hello, hello,<br></p>
-<h2>Juliet<br></h2>
-<p>I know, I know, I know</p>
-<p>Let me in again
-<br><br>I need you please
-<br><br>Don't you make me beg
-<br><br>I'm on my knees
-<br><br>Where are you now
-<br><h2>Juliet<br></h2>
-Where are you now 
-<h2>Juliet<br></h2>
-Where are you now 
-<h2>Juliet,</h2>
-<br><h1>Juliet?</h1></p>
+  <p>Hello, hello,</p> 
+  <h2>Juliet</h2>
 
+  <p>Hello, hello, hello</p>
+  <p>Hello, hello,</p>
+  <h2>Juliet</h2>
+
+  <p>I know the things I should've said</p>
+
+  <p>Hello, hello,</p> 
+  <h2>Juliet</h2>
+  <p>I know, I know, I know</p>
+
+  <p>Yet to my surprise<br>
+  You've come to me<br>
+  Let me make it right<br>
+  Just wait for me<br>
+  We could start from scratch<br>
+  And then proceed 'til I lose it all<br>
+  You slip from me</p>
+
+  <p>Hello, hello,</p> 
+  <h2>Juliet</h2>
+  <p>I know the things I should've said</p>
+  <p>Hello, hello,</p>
+  <h2>Juliet</h2>
+  <p>I know, I know, I know</p>
+
+  <p>Let me in again<br>
+  I need you please<br>
+  Don't you make me beg<br>
+  I'm on my knees</p>
+
+  <p>Where are you now</p>
+  <h2>Juliet</h2>
+
+  <p>Where are you now</p> 
+  <h2>Juliet</h2>
+
+  <p>Where are you now</p> 
+  <h2>Juliet,</h2>
+
+  <h1>Juliet?</h1>
+
+  <div class="personal-note">
+    A beautiful track and my personal <br>favorite from the 2024 release. <br>It stays with you long after the final note.
+  </div>
+
+  <footer>Website made by Ashley Touzel</footer>
+
+</div>
 
 </body>
 </html>
